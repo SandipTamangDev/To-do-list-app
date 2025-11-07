@@ -19,9 +19,31 @@ section {
     align-items: center;
     background-color: red;
     padding: 1.25em;
+    border-radius: 10px;
 }
 
 h1 {
     font-size: 48px;
+    
     color: white;
 }
+
+p {
+    font-size: 1em;
+}
+
+ul {
+    list-style-type: decimal;
+    background-color: yellow;
+    width: 100%;
+    padding: 0 1.25em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+input, button {
+    padding: 0.5em;
+}
+
+
