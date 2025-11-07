@@ -20,10 +20,12 @@ section {
     background-color: red;
     padding: 1.25em;
     border-radius: 10px;
+    border: 2px solid black;
+    
 }
 
 h1 {
-    font-size: 48px;
+    font-size: clamp(2em, 5vw , 3em);
     
     color: white;
 }
@@ -42,8 +44,23 @@ ul {
     gap: 1em;
 }
 
-input, button {
-    padding: 0.5em;
+.container-input {
+    display: flex;
+    gap: 0.5em;
+    width: 100%;
+    border: 2px solid yellow;
 }
+
+input {
+    max-width: 600px;
+    padding: 0.5em;
+    flex: 1;
+}
+
+button {
+    padding: 0.5em 1em;
+    white-space: wrap;
+}
+
 
 
