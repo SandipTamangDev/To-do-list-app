@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1.25em 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25em;
+    align-items: center;
+    background-color: red;
+    padding: 1.25em;
+}
+
+h1 {
+    font-size: 48px;
+    color: white;
+}
