@@ -1,5 +1,6 @@
 const button = document.getElementById('button');
-const taskList = document.getElementById('task-list')
+const taskList = document.getElementById('task-list');
+const input = document.querySelector('.container input')
 
 button.addEventListener('click', () =>{
     const taskText = input.value.trim();
