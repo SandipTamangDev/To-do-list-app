@@ -4,12 +4,16 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #333;
+    padding: 20px;
+}
+
 section {
     height: 100vh;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding: 1.25em 0;
 }
 
 .container {
@@ -17,16 +21,11 @@ section {
     flex-direction: column;
     gap: 1.25em;
     align-items: center;
-    background-color: red;
-    padding: 1.25em;
     border-radius: 10px;
-    border: 2px solid black;
-    
 }
 
 h1 {
     font-size: clamp(2em, 5vw , 3em);
-    
     color: white;
 }
 
@@ -35,31 +34,49 @@ p {
 }
 
 ul {
-    list-style-type: decimal;
-    background-color: yellow;
+    list-style-type: none;
     width: 100%;
     padding: 0 1.25em;
     display: flex;
     flex-direction: column;
     gap: 1em;
+    max-width: 500px;
 }
 
-.container-input {
+.input-wrap {
     display: flex;
     gap: 0.5em;
     width: 100%;
-    border: 2px solid yellow;
+    min-width: 250px;
+    max-width: 768px;
 }
 
 input {
-    max-width: 600px;
-    padding: 0.5em;
+    padding: 1em 2em;
     flex: 1;
+    border-radius: 50px;
+    background-color: #404040;
+    color: #c4c4c4;
+    border: 1px solid #c4c4c4;
+}
+
+input::placeholder {
+    color: rgb(152, 152, 152);
 }
 
 button {
     padding: 0.5em 1em;
     white-space: wrap;
+    position: relative;
+    border-radius: 50px;
+    border: 1px solid #c7c7c7;
+    background-color: #656565;
+    color: #c0c0c0;
+}
+
+li {
+    background-color: #535353;
+    color: #c7c6c6;
 }
 
 
