@@ -8,9 +8,24 @@
         <script defer src="js/script.js"></script>
     </head>
     <body>
+        <header>
+            <div class="Logo">
+                <logo>Today or Never</logo>
+            </div>
+
+            
+
+            <ul class="nav-lists">
+                <li><a href="#">Completed</a></li>
+                <li><a href="#">Inspired from.</a></li>
+            </ul>
+        </header>
+
         <section>
             <div class="container">
                 <h1>Task To Do Today</h1>
+
+                <p>Add only three task</p>
 
                 <div class="input-wrap">
                     <input type="text" placeholder="Add your task .....">
@@ -19,7 +34,22 @@
 
                 <ul id="task-list"></ul>
 
+                <button type="button" id="next">Next</button>
+
             </div>
         </section>
+
+        <div id="popup" class="popup">
+            <div class="popup-content">
+            <p id="popup-message"></p>
+            <button type="button" id="popup-ok">OK</button>
+        </div>
+</div>
+
+</div>
+
+        <footer>
+            Designed by <a href="#">Tenzin Dundul</a> Developed by <a href="tamangsandip.com.np">Sandip Tamang</a>.
+        </footer>
     </body>
 </html>
