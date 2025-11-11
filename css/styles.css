@@ -1,155 +1,209 @@
+/* Refactored CSS for To-Do List App */
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
 
 body {
-    background-color: #333;
+background-color: #333;
+color: #fff;
+font-family: system-ui, sans-serif;
 }
 
-
 header {
-    height: 60px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
+height: 60px;
+padding: 20px;
+display: flex;
+align-items: center;
+justify-content: space-between;
 }
 
 .nav-lists {
-    display: flex;
-    list-style: none;
-    gap: 1.25em;
+display: flex;
+list-style: none;
+gap: 1.25em;
 }
 
 .nav-lists a {
-    color: white;
+color: white;
+text-decoration: none;
+transition: opacity 0.2s ease;
 }
 
-
-
-
-
-
-
+.nav-lists a:hover {
+opacity: 0.7;
+}
 
 section {
-    height: calc(100vh - 140px);
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+height: calc(100vh - 140px);
+display: flex;
+align-items: flex-start;
+justify-content: center;
+padding-top: 2em;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25em;
-    align-items: center;
-    border-radius: 10px;
+display: flex;
+flex-direction: column;
+gap: 1.25em;
+align-items: center;
+max-width: 600px;
+width: 100%;
+padding: 1em;
 }
 
 h1 {
-    font-size: clamp(2em, 5vw , 3em);
-    color: white;
+font-size: clamp(2em, 5vw, 3em);
 }
 
 p {
-    font-size: 1em;
-}
-
-section ul {
-    list-style-type: none;
-    width: 100%;
-    padding: 0 1.25em;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    max-width: 500px;
+font-size: 1em;
+color: #c4c4c4;
 }
 
 .input-wrap {
-    display: flex;
-    gap: 0.5em;
-    width: 100%;
-    min-width: 250px;
-    max-width: 768px;
+display: flex;
+gap: 0.5em;
+width: 100%;
+max-width: 500px;
 }
 
 input {
-    padding: 1em 2em;
-    flex: 1;
-    border-radius: 50px;
-    background-color: #404040;
-    color: #c4c4c4;
-    border: 1px solid #c4c4c4;
+padding: 1em 2em;
+flex: 1;
+border-radius: 50px;
+background-color: #404040;
+color: #c4c4c4;
+border: 1px solid #c4c4c4;
 }
 
 input::placeholder {
-    color: rgb(152, 152, 152);
+color: rgb(152, 152, 152);
 }
 
 button {
-    padding: 0.5em 1em;
-    white-space: wrap;
-    position: relative;
-    border-radius: 50px;
-    border: 1px solid #c7c7c7;
-    background-color: #656565;
-    color: #c0c0c0;
+padding: 0.5em 1em;
+border-radius: 50px;
+border: 1px solid #c7c7c7;
+background-color: #656565;
+color: #c0c0c0;
+cursor: pointer;
+transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-section li {
-    background-color: #535353;
-    color: #c7c6c6;
-    padding: 0.5em 1em;
-    border-radius: 50px;
+button:hover {
+background-color: #7a7a7a;
+transform: scale(1.05);
 }
 
+/* --- Task List --- */
+#task-list {
+list-style-type: none;
+width: 100%;
+max-width: 500px;
+display: flex;
+flex-direction: column;
+gap: 1em;
+}
+
+.task-item {
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: #535353;
+color: #c7c6c6;
+padding: 0.5em 1em;
+border-radius: 50px;
+transition: transform 0.1s ease;
+}
+
+.task-item:hover {
+transform: scale(1.02);
+}
+
+.task-left {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.task-buttons {
+display: flex;
+gap: 5px;
+}
+
+.completed {
+text-decoration: line-through;
+opacity: 0.6;
+}
+
+/* --- Popup --- */
 .popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden; /* hidden by default */
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+visibility: hidden;
 }
 
 .popup-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
+background: #fff;
+padding: 20px;
+border-radius: 8px;
+text-align: center;
+color: #333;
+max-width: 300px;
 }
 
 #popup-ok {
-    margin-top: 10px;
-    padding: 5px 10px;
-    cursor: pointer;
+margin-top: 10px;
+padding: 5px 10px;
+border-radius: 5px;
+border: none;
+background-color: #333;
+color: #fff;
+cursor: pointer;
+transition: background-color 0.2s ease;
 }
 
+#popup-ok:hover {
+background-color: #555;
+}
 
-
-
-
+/* --- Footer --- */
 footer {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffff;
+height: 60px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #fff;
 }
 
 footer a {
-    color: whitesmoke;
+color: whitesmoke;
+text-decoration: none;
+margin: 0 5px;
+}
+
+footer a:hover {
+opacity: 0.8;
 }
 
 
+.active-task {
+    box-shadow: 0 0 15px #00ff88;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
 
-
-
+.inactive-task {
+    opacity: 0.4;
+    pointer-events: none;
+}
