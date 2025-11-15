@@ -1,11 +1,6 @@
-Here’s a professional and detailed `README.md` for your To-Do List app:
-
-````markdown
 # Today or Never - To-Do List App
 
 **Today or Never** is a minimalist, focus-driven To-Do List web application designed to help you prioritize and complete your most important tasks each day. Inspired by productivity principles like "less is more," this app encourages users to focus on only three key tasks daily.
-
----
 
 ## Features
 
@@ -20,14 +15,11 @@ Here’s a professional and detailed `README.md` for your To-Do List app:
 - **Popup messages:** Friendly reminders guide you if you exceed task limits or need confirmation.
 - **Responsive design:** Works well on both desktop and mobile screens.
 
----
-
 ## Demo
 
 ![Screenshot](screenshot.png)  
 *(Add a screenshot of your app here if available.)*
 
----
 
 ## Installation
 
@@ -95,10 +87,3 @@ git clone https://github.com/yourusername/today-or-never.git
 ## License
 
 This project is **free to use** for personal purposes. Adaptation and improvement are encouraged.
-
-```
-
-I can also create a **shorter, more motivational version** for your personal branding page if you want.  
-
-Do you want me to do that as well?
-```
