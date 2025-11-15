@@ -1,55 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>To do list App</title>
-        <link rel="stylesheet" href="css/styles.css">
-        <script defer src="js/script.js"></script>
-    </head>
-    <body>
-        <header>
-            <div class="Logo">
-                <logo>Today or Never</logo>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today or Never - To-Do App</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
+    <style>
+        /* Landing page overrides */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: space-between;
+            background: linear-gradient(135deg, #1f1f1f, #333);
+        }
 
+        header {
+            justify-content: center;
+            gap: 2em;
+        }
 
+        header .Logo {
+            font-size: 2em;
+            font-weight: bold;
+            color: #f2f2f2;
+        }
 
-            <ul class="nav-lists">
-                <li><a href="#">Completed</a></li>
-                <li><a href="#">Inspired from.</a></li>
-            </ul>
-        </header>
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2em;
+            text-align: center;
+            padding: 2em;
+            color: #f0f0f0;
+        }
 
-        <section>
-            <div class="container">
-                <h1>Task To Do Today</h1>
+        main h1 {
+            font-size: 3em;
+        }
 
-                <p>Add only three task</p>
+        main p {
+            font-size: 1.25em;
+        }
 
-                <div class="input-wrap">
-                    <input type="text" placeholder="Add your task .....">
-                    <button id="add" type="button" title="Add">Add</button>
-                </div>
+        .auth-buttons {
+            display: flex;
+            gap: 1em;
+        }
 
-                <ul id="task-list"></ul>
+        .auth-buttons button {
+            padding: 0.75em 2em;
+            font-size: 1em;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
 
-                <button type="button" id="confirm">Confirm</button>
+        .login-btn {
+            background-color: #656565;
+            color: #fff;
+        }
 
-            </div>
-        </section>
+        .login-btn:hover {
+            background-color: #505050;
+        }
 
-        <div id="popup" class="popup">
-            <div class="popup-content">
-            <p id="popup-message"></p>
-            <button type="button" id="popup-ok">OK</button>
+        .signup-btn {
+            background-color: #007BFF;
+            color: #fff;
+        }
+
+        .signup-btn:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #00aaff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="Logo">Today or Never</div>
+    </header>
+
+    <main>
+        <h1>Organize Your Day</h1>
+        <p>Focus on the three tasks that matter most. Achieve more every day.</p>
+        <div class="auth-buttons">
+            <button type="button" class="login-btn" onclick="window.location.href='login.html'">Login</button>
+            <button type="button" class="signup-btn" onclick="window.location.href='signup.html'">Sign Up</button>
         </div>
-</div>
+    </main>
 
-</div>
-
-        <footer>
-            Designed by <a href="#">Tenzin Dundul</a> Developed by <a href="https://tamangsandip.com.np">Sandip Tamang</a>.
-        </footer>
-    </body>
+    <footer>
+        Designed by <a href="#">Tenzin Dundul</a> | Developed by <a href="https://tamangsandip.com.np">Sandip Tamang</a>
+    </footer>
+</body>
 </html>

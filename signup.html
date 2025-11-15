@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Today or Never</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #1f1f1f, #333);
+            color: #f0f0f0;
+        }
+
+        .signup-container {
+            background-color: #2b2b2b;
+            padding: 2em 3em;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5em;
+            min-width: 300px;
+        }
+
+        .signup-container h1 {
+            text-align: center;
+            margin-bottom: 0.5em;
+        }
+
+        input {
+            padding: 0.75em 1em;
+            border-radius: 50px;
+            border: 1px solid #c4c4c4;
+            background-color: #404040;
+            color: #f0f0f0;
+            width: 100%;
+        }
+
+        input::placeholder {
+            color: #b0b0b0;
+        }
+
+        button {
+            padding: 0.75em 1em;
+            border-radius: 50px;
+            border: none;
+            background-color: #28a745;
+            color: #fff;
+            font-size: 1em;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background-color: #1e7e34;
+        }
+
+        .links {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9em;
+        }
+
+        .links a {
+            color: #00aaff;
+            text-decoration: none;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 2em;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #00aaff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h1>Sign Up</h1>
+        <input type="text" placeholder="Full Name" id="name">
+        <input type="email" placeholder="Email" id="email">
+        <input type="password" placeholder="Password" id="password">
+        <input type="password" placeholder="Confirm Password" id="confirm-password">
+        <button type="button" onclick="signup()">Sign Up</button>
+        <div class="links">
+            <a href="login.html">Already have an account?</a> <br>
+            <a href="forgetpassword.html">Forgot Password?</a>
+        </div>
+    </div>
+
+    <footer>
+        Designed by <a href="#">Tenzin Dundul</a> | Developed by <a href="https://tamangsandip.com.np">Sandip Tamang</a>
+    </footer>
+
+    <script>
+        function signup() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const confirmPassword = document.getElementById('confirm-password').value.trim();
+
+            if (!name || !email || !password || !confirmPassword) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+                return;
+            }
+
+            // Placeholder logic: Replace with your authentication
+            alert(`Signed up with\nName: ${name}\nEmail: ${email}\nPassword: ${password}`);
+        }
+    </script>
+</body>
+</html>
