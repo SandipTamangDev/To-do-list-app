@@ -187,11 +187,11 @@ function addTask() {
   const taskText = input.value.trim();
   if (!taskText) return;
 
-  if (taskList.children.length >= 3) {
-    popupMessage.textContent = "Add only three tasks at a time!";
-    popup.style.visibility = 'visible';
-    return;
-  }
+  // if (taskList.children.length >= 3) {
+  //   popupMessage.textContent = "Add only three tasks at a time!";
+  //   popup.style.visibility = 'visible';
+  //   return;
+  // }
 
   createTaskElement(taskText);
   input.value = '';
